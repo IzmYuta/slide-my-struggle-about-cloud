@@ -13,12 +13,6 @@ class: 'text-center'
 
 
 ---
-layout: center
----
-
-# 1日クオリティですまない！！
-
----
 layout: default
 ---
 
@@ -26,7 +20,7 @@ layout: default
 
 - 自己紹介
 - 作ったサービスの紹介
-- 作ってみた感想
+- 感想とか
 - まとめ
 
 ---
@@ -54,7 +48,7 @@ layoutClass: gap-16
 
 - 内定先：株式会社GINIEE
 
-- 趣味：コーヒー
+- 趣味：コーヒー、ゲーム全般
 
 - 近況：研究テーマが「やっと」決まりました
 
@@ -120,12 +114,85 @@ layout: intro
 PGCloud(仮)
 
 ---
+layout: image-right
+image: /img/opennebula.png
+---
+
+# PGCloud
+
+<v-click>
+
+## Is 何？
+
+</v-click>
+<br>
+
+<v-click>
+
+### ・数クリックでサーバーを構築
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### ・任意のRAM、コア数
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### ・PG生限定、基本無料で使い放題
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### ・リッチな管理画面付き
+
+</v-click>
+
+
+<br><br>
+
+<v-click>
+
+↓詳しくは
+<br>
+[紹介ページ](https://speckled-shirt-113.notion.site/PGCloud-7a6177b25b9e4ae0ba341bcaffeefc47)
+
+</v-click>
+
+---
+layout: center
+---
+
+# 説明するより見た方が早い
+というわけでデモ
+
+
+---
 layout: intro
 ---
 
-# 作ってみた感想
+# 感想とか
 
+ほんへ
 
+---
+layout: default
+---
+
+# ラインナップ(時系列順)
+
+- そもそもなんで作ろうと思ったのか
+- 大変だったこと
+- 自分で使ってみて思ったこと
 
 ---
 layout: intro
@@ -134,3 +201,38 @@ layout: intro
 # まとめ
 
 ダンダスのダンス、ダンダンス
+
+---
+layout: default
+---
+
+# まとめ
+
+
+<v-click>
+
+### ・ 使われるものを作りたいなら市場・顧客調査をしっかりやろう
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### ・ 信頼性には、膨大な手間と知識とお金がかけられていることを覚えておこう
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### ・ お金はケチらず良いものに触れよう
+
+</v-click>
+
+---
+layout: center
+---
+
+# おわり
