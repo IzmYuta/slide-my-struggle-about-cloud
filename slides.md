@@ -184,7 +184,7 @@ layout: intro
 
 # 感想とか
 
-ほんへ
+ここから本番
 
 ---
 layout: default
@@ -205,7 +205,7 @@ layout: default
 # 作ろうと思った理由
 
 - テックコミュニティ？？
-- Trapへの憧れ(某J氏の思い)
+- traPへの憧れ(某J氏の思いもある)
 
 ---
 layout: image-right
@@ -612,6 +612,65 @@ layout: default
 <br>
 
 <img  src="/img/スクリーンショット 2024-11-23 17.29.28.png">
+
+---
+layout: default
+---
+
+# CloudFlareは神
+<v-click>
+
+## ただのドメインレジストラじゃねぇぞ
+
+</v-click>
+
+<br>
+<v-click>
+
+### ホストIPを明かさずにDNS名前解決できる
+- つまり、サーバーを公開しても自宅のIPがバレないってこと
+- プロキシを使って実現している
+
+</v-click>
+
+<br>
+<v-click>
+
+### DDos対策が無料でできる
+- DDos緊急防衛モードが無料で利用可能
+- ワンクリックで設定のON/OFFができる
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### 証明書の設定を自動で行ってくれる
+- 更新も含めて全部やってくれる
+- 意外と忘れがちなので助かる
+
+</v-click>
+
+---
+layout: default
+---
+
+# CloudFlareは神
+
+
+## ただのドメインレジストラじゃねぇぞ
+
+<br><br><br><br><br>
+
+<v-click>
+
+<div class="text-center">
+    <h2>自宅サーバー運用に必要なものが全部揃ってる</h2>
+</div>
+
+</v-click>
+
 
 ---
 layout: center
