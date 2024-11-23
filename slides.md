@@ -9,6 +9,8 @@ class: 'text-center'
 
 # 自宅クラウドを作ってみて
 
+## Free Edition
+
 泉 祐汰
 
 
@@ -182,17 +184,23 @@ layout: intro
 
 # 感想とか
 
-ほんへ
+本編
 
 ---
 layout: default
 ---
 
-# ラインナップ(時系列順)
+# ラインナップ
 
-- そもそもなんで作ろうと思ったのか
+- 作ろうと思った理由
 - 大変だったこと
+- 自宅鯖を作るメリット
 - 自分で使ってみて思ったこと
+- 改めて考え直してみて
+
+<br><br><br>
+
+## VIP Editionで全編公開中！
 
 ---
 layout: intro
@@ -200,7 +208,7 @@ layout: intro
 
 # まとめ
 
-ダンダスのダンス、ダンダンス
+なんか書いとけ
 
 ---
 layout: default
@@ -228,6 +236,14 @@ layout: default
 <v-click>
 
 ### ・ お金はケチらず良いものに触れよう
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### ・ 自宅鯖は別に作らなくてもいい
 
 </v-click>
 
