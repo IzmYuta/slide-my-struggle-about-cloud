@@ -1,7 +1,7 @@
 ---
 theme: Seriph # https://sli.dev/themes/gallery.html
 title: 自宅クラウドを作ってみて
-download: false
+download: true
 lineNumbers: true
 background: /img/galaxy-3608029_1920.jpg
 class: 'text-center'
@@ -52,7 +52,8 @@ layoutClass: gap-16
 
 - 趣味：コーヒー、ゲーム全般
 
-- 近況：研究テーマが「やっと」決まりました
+- 近況：研究テーマが「やっと」決まりました<br>
+バイト先でフルスタックにこき使われてます
 
 ::right::
 
@@ -716,18 +717,6 @@ layout: default
   - 道具の使い方を知るだけで満足して欲しくなかった
   - デプロイできた！で止まって欲しくない
   - その先のHowやWhyについて一緒に議論したかった
-
-
---- 
-layout: two-cols
-layoutClass: gap-16
----
-
-# kpppn様の一言
-
-:: right ::
-
-<img h="80%" src="/img/スクリーンショット 2024-11-23 0.47.11.png">
 
 ---
 layout: intro
