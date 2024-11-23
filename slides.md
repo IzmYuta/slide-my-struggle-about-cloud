@@ -13,6 +13,9 @@ class: 'text-center'
 
 泉 祐汰
 
+<script setup>
+document.documentElement.classList.add('dark')
+</script>
 
 ---
 layout: default
