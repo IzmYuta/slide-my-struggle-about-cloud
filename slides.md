@@ -1,7 +1,7 @@
 ---
 theme: Seriph # https://sli.dev/themes/gallery.html
-title: 自宅クラウドを作ってみて(Free Edition)
-download: false
+title: 自宅クラウドを作ってみて
+download: true
 lineNumbers: true
 background: /img/galaxy-3608029_1920.jpg
 class: 'text-center'
@@ -46,13 +46,16 @@ layoutClass: gap-16
 
 - 所属コース：バックエンド
 
+- 案件：PGWeb(バックエンド、PdM補佐)
+
 - 大学：東京理科大学(25卒)
 
 - 内定先：株式会社GINIEE
 
 - 趣味：コーヒー、ゲーム全般
 
-- 近況：研究テーマが「やっと」決まりました
+- 近況：研究テーマが「やっと」決まりました<br>
+バイト先でフルスタックにこき使われてます
 
 ::right::
 
@@ -184,7 +187,7 @@ layout: intro
 
 # 感想とか
 
-本編
+ここから本番
 
 ---
 layout: default
@@ -196,11 +199,526 @@ layout: default
 - 大変だったこと
 - 自宅鯖を作るメリット
 - 自分で使ってみて思ったこと
-- 改めて考え直してみて
+- 振り返り
 
-<br><br><br>
+---
+layout: default
+---
 
-## VIP Editionで全編公開中！
+# 作ろうと思った理由
+
+- テックコミュニティ？？
+- traPへの憧れ(某J氏の思いもある)
+
+---
+layout: image-right
+image: "/img/スクリーンショット_2024-11-23_12_12_22.png"
+---
+
+# 作ろうと思った理由
+
+
+<v-click>
+
+## 時は2024年7月某日...
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### 飯の投稿多くね？？
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### テックコミュニティ🤔🤔
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### PlayGroundをもっとGeekな感じにしたい...
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### 東工大の技術サークル、traPのような！！
+
+</v-click>
+---
+layout: default
+---
+
+# traP V.S. PlayGround
+## traPのようになるには何が必要か...
+
+<br>
+
+|ツール種別|traP|PlayGround|
+|---|---|---|
+|<v-click> コミュニケーションツール </v-click> | <v-click> traQ </v-click> | <v-click> Discord / PGrit </v-click>|
+|<v-click> ポートフォリオサービス </v-click>|<v-click> traPortfolio </v-click>| <v-click> HP / PG PORTFOLIO</v-click> |
+|<v-click> イベント管理ツール </v-click>|<v-click> knoQ </v-click>| <v-click> Discord / PGWeb</v-click> |
+|<v-click> 部内向けインフラ基盤 </v-click>|<v-click> NeoShowcase </v-click>| <v-click> 🤔</v-click> |
+
+<br>
+
+<v-click>
+
+## → インフラ基盤を作ればいいんだ！！
+
+</v-click>
+
+
+
+---
+layout: default
+---
+
+# いざ実践
+
+- エラーとの戦い
+- 何が原因かわからなくなる
+- → 現実逃避(OSS探し)の旅に出る
+- OpenNebulaとの出会い
+- 足りないのはルーティングテーブルの設定だった
+- CloudFlareは神
+
+---
+layout: default
+---
+
+# いざ実践
+
+
+<v-click>
+
+## ベースOSやインストールオプションの選択
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### OS：Ubuntu
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### → ネットに落ちている記事のほとんどがUbuntuだったから
+
+</v-click>
+
+
+<br>
+
+<v-click>
+
+### インストールオプション： kolla-ansible
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### → 他のオプションはメンテされておらず、ドキュメントも古かったため
+
+</v-click>
+
+
+---
+layout: default
+---
+
+# エラーとの戦い
+
+## やり直しに時間がかかる
+<br>
+
+<v-click>
+
+### OpenStackは超巨大なソフトウェア、構築に3時間かかる
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### 失敗するたびにリセットコマンドを実行して、設定を見直して再構築
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### たまにリセットにも失敗する、その時はOSから入れ直す
+
+</v-click>
+
+
+<br><br>
+
+<v-click>
+
+## それを丸1週間繰り返してやっと成功！
+
+</v-click>
+
+---
+layout: image-right
+image: "/img/スクリーンショット 2024-11-23 15.04.00.png
+---
+
+# 成功はした...が
+
+
+<v-click>
+
+### インスタンスに直接sshできない
+
+</v-click>
+<br>
+<v-click>
+
+
+### インスタンスから外部に通信不可
+
+</v-click>
+
+<v-click>
+
+- NICが干渉している？
+
+</v-click>
+<v-click>
+
+- PCのファイアウォール？
+
+</v-click>
+<v-click>
+
+- ルーター？
+
+</v-click>
+<v-click>
+
+- All-in-Oneだから？
+
+</v-click>
+<v-click>
+
+- そもそも使い方を間違えている？
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### 原因が多すぎてわからない
+
+</v-click>
+
+
+<br>
+<v-click>
+
+### OpenStackから逃げる
+
+</v-click>
+
+
+---
+layout: default
+---
+
+# 俺が欲しかったもの
+
+<br>
+<v-click>
+
+### ・短い環境構築
+
+</v-click>
+<br>
+<v-click>
+
+### ・シンプルで必要最低限の機能
+
+</v-click>
+<br>
+<v-click>
+
+### ・デザインがいい感じ
+
+</v-click>
+<br><br>
+<v-click>
+
+## そんな都合のいいものがあるのか...?
+
+</v-click>
+
+
+--- 
+layout: cover
+background: /img/galaxy-3608029_1920.jpg
+---
+
+# OpenNebula
+
+---
+layout: default
+---
+# OpenNebulaのここがすごい！
+
+<v-click>
+
+## 軽量&シンプル
+
+</v-click>
+<v-click>
+
+- 1つのBashスクリプトをダウンロードするだけで準備完了
+
+</v-click>
+<v-click>
+
+- 構築・破壊も1コマンドで実施可能
+
+</v-click>
+<v-click>
+
+- 必要なリソースがOpenStackの66%
+
+</v-click>
+
+<br>
+<v-click>
+
+## 必要十分な機能群
+
+</v-click>
+<v-click>
+
+- コンピューティング
+
+</v-click>
+<v-click>
+
+- ネットワーク
+
+</v-click>
+<v-click>
+
+- ストレージ
+
+</v-click>
+<v-click>
+
+- IAM
+
+</v-click>
+<v-click>
+
+- IDフェデレーション
+
+</v-click>
+<v-click>
+
+- スケジューラ
+
+</v-click>
+<v-click>
+
+- モニタリング
+
+</v-click>
+<v-click>
+
+- オーバーコミット ...
+
+</v-click>
+
+---
+layout: default
+---
+
+# そういえば
+
+### インスタンスに直接sshできなかったのは？
+
+<v-click>
+
+- 僕がネットワークについて勘違いしていたから
+- インスタンスに繋がるネットワークは、ルータに直接接続されているわけではない
+- PCでポートフォワーディングをしないと認識できない
+
+</v-click>
+
+<br>
+
+### インスタンスから外部に通信不可だったのは？
+<v-click>
+
+- ルーティングテーブルの設定の問題
+- FORWARDが全てDROPされるようになっていた
+- ACCEPTに変更することで通信できるようになった
+- ただ、PCを再起動するとOpenNebulaによってDROPに戻される
+- 悪いのはOpenNebulaか、自分の構成か
+
+</v-click>
+
+---
+layout: default
+---
+
+# ポートフォワーディング
+
+### この画像はマイクラ用の設定
+
+<br>
+
+- PCに対して、ポート番号25565に来た通信を、インスタンス(172.16.100.2:25565)に転送する、の意
+
+<br>
+
+<img  src="/img/スクリーンショット 2024-11-23 17.35.44.png">
+
+---
+layout: default
+---
+
+# ルーティングテーブル
+
+- INPUT：サーバーに入ってくる通信
+- OUTPUT：サーバーから出て行く通信
+- FORWARD：受信したデータを他のサーバーへ転送する際に適用される
+
+<br>
+
+<img  src="/img/スクリーンショット 2024-11-23 17.29.28.png">
+
+---
+layout: default
+---
+
+# CloudFlareは神
+<v-click>
+
+## ただのドメインレジストラじゃねぇぞ
+
+</v-click>
+
+<br>
+<v-click>
+
+### ホストIPを明かさずにDNS名前解決できる
+- つまり、サーバーを公開しても自宅のIPがバレないってこと
+- プロキシを使って実現している
+
+</v-click>
+
+<br>
+<v-click>
+
+### DDos対策が無料でできる
+- DDos緊急防衛モードが無料で利用可能
+- ワンクリックで設定のON/OFFができる
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### 証明書の設定を自動で行ってくれる
+- 更新も含めて全部やってくれる
+- 意外と忘れがちなので助かる
+
+</v-click>
+
+---
+layout: default
+---
+
+# CloudFlareは神
+
+
+## ただのドメインレジストラじゃねぇぞ
+
+<br><br><br><br><br>
+
+<v-click>
+
+<div class="text-center">
+    <h2>自宅サーバー運用に必要なものが全部揃ってる</h2>
+</div>
+
+</v-click>
+
+
+---
+layout: center
+---
+
+# 自宅クラウド、完成！
+
+
+---
+layout: default
+---
+
+# 自宅鯖を作るメリット
+
+- プロキシ完全に理解した
+- ネットワーク完全に理解した
+- 仮想化ってすげー
+- ssh怖くない
+- エラーに対する嗅覚(権限、ハードウェア依存か否か)が身に付く
+- 研究室のPCのsshサーバー設定ができるようになった
+- 役に立つか立たないかはわからない、だけど知ってるとそれだけでちょっと威張れたりもする
+
+---
+layout: default
+---
+
+# 使ってみて思ったこと
+
+- そもそもAWS使えない状態で、PGCloud触るの無理くね？
+- 微妙に仕様が違うせいで、PGCloudに慣れるとむしろ悪影響じゃね？
+- 例え無料でも、停電や掃除で電源落ちるレベルの不安定さはダメじゃね？
+
+
+---
+layout: default
+---
+
+# 振り返り
+- そもそも、無料で使いたいなら、AWS Educateアカウント作れば良くね？
+- そもそも、traPでもちゃんとGeekしているのは上位勢だけらしい
+- そもそも、Linuxサーバー使えて喜ぶの、俺だけ説
+- そもそも、Geekであって欲しいのはなんでなの？
+  - 道具の使い方を知るだけで満足して欲しくなかった
+  - デプロイできた！で止まって欲しくない
+  - その先のHowやWhyについて一緒に議論したかった
 
 ---
 layout: intro
@@ -220,6 +738,14 @@ layout: default
 <v-click>
 
 ### ・ 使われるものを作りたいなら市場・顧客調査をしっかりやろう
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### ・ 目標は具体的に設定しよう
 
 </v-click>
 
