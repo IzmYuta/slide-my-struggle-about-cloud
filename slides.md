@@ -1,6 +1,6 @@
 ---
 theme: Seriph # https://sli.dev/themes/gallery.html
-title: Linuxのススメ
+title: 自宅クラウドを作ってみて(Free Edition)
 download: false
 lineNumbers: true
 background: /img/galaxy-3608029_1920.jpg
