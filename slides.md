@@ -1,6 +1,6 @@
 ---
 theme: Seriph # https://sli.dev/themes/gallery.html
-title: Linuxのススメ
+title: 自宅クラウドを作ってみて
 download: false
 lineNumbers: true
 background: /img/galaxy-3608029_1920.jpg
@@ -43,6 +43,8 @@ layoutClass: gap-16
 - 名前：泉祐汰
 
 - 所属コース：バックエンド
+
+- 案件：PGWeb(バックエンド、PdM補佐)
 
 - 大学：東京理科大学(25卒)
 
@@ -194,12 +196,13 @@ layout: default
 - 大変だったこと
 - 自宅鯖を作るメリット
 - 自分で使ってみて思ったこと
+- 振り返り
 
 ---
 layout: default
 ---
 
-# そもそもなんで作ろうと思ったのか
+# 作ろうと思った理由
 
 - テックコミュニティ？？
 - Trapへの憧れ(某J氏の思い)
@@ -253,8 +256,25 @@ image: "/img/スクリーンショット_2024-11-23_12_12_22.png"
 layout: default
 ---
 
-# PlayGround V.S. traP
+# traP V.S. PlayGround
+## traPのようになるには何が必要か...
 
+<br>
+
+|ツール種別|traP|PlayGround|
+|---|---|---|
+|<v-click> コミュニケーションツール </v-click> | <v-click> traQ </v-click> | <v-click> Discord / PGrit </v-click>|
+|<v-click> ポートフォリオサービス </v-click>|<v-click> traPortfolio </v-click>| <v-click> HP / PG PORTFOLIO</v-click> |
+|<v-click> イベント管理ツール </v-click>|<v-click> knoQ </v-click>| <v-click> Discord / PGWeb</v-click> |
+|<v-click> 部内向けインフラ基盤 </v-click>|<v-click> NeoShowcase </v-click>| <v-click> 🤔</v-click> |
+
+<br>
+
+<v-click>
+
+## → インフラ基盤を作ればいいんだ！！
+
+</v-click>
 
 
 
@@ -262,12 +282,313 @@ layout: default
 layout: default
 ---
 
-# 大変だったこと
+# いざ実践
 
-- OpenStackむずすぎ
-- エラーが出ても何が原因かわからない
-- ハードウェアが原因でどう足掻いてもできないことが判明
-- -> OSS探しの旅に出る
+- エラーとの戦い
+- 何が原因かわからなくなる
+- → 現実逃避(OSS探し)の旅に出る
+- OpenNebulaとの出会い
+- 足りないのはルーティングテーブルの設定だった
+- CloudFlareは神
+
+---
+layout: default
+---
+
+# いざ実践
+
+
+<v-click>
+
+## ベースOSやインストールオプションの選択
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### OS：Ubuntu
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### → ネットに落ちている記事のほとんどがUbuntuだったから
+
+</v-click>
+
+
+<br>
+
+<v-click>
+
+### インストールオプション： kolla-ansible
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### → 他のオプションはメンテされておらず、ドキュメントも古かったため
+
+</v-click>
+
+
+---
+layout: default
+---
+
+# エラーとの戦い
+
+## やり直しに時間がかかる
+<br>
+
+<v-click>
+
+### OpenStackは超巨大なソフトウェア、構築に3時間かかる
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### 失敗するたびにリセットコマンドを実行して、設定を見直して再構築
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### たまにリセットにも失敗する、その時はOSから入れ直す
+
+</v-click>
+
+
+<br><br>
+
+<v-click>
+
+## それを丸1週間繰り返してやっと成功！
+
+</v-click>
+
+---
+layout: image-right
+image: "/img/スクリーンショット 2024-11-23 15.04.00.png
+---
+
+# 成功はした...が
+
+
+<v-click>
+
+### インスタンスに直接sshできない
+
+</v-click>
+<br>
+<v-click>
+
+
+### インスタンスから外部に通信不可
+
+</v-click>
+
+<v-click>
+
+- NICが干渉している？
+
+</v-click>
+<v-click>
+
+- PCのファイアウォール？
+
+</v-click>
+<v-click>
+
+- ルーター？
+
+</v-click>
+<v-click>
+
+- All-in-Oneだから？
+
+</v-click>
+<v-click>
+
+- そもそも使い方を間違えている？
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### 原因が多すぎてわからない
+
+</v-click>
+
+
+<br>
+<v-click>
+
+### OpenStackから逃げる
+
+</v-click>
+
+
+---
+layout: default
+---
+
+# 俺が欲しかったもの
+
+<br>
+<v-click>
+
+### ・短い環境構築
+
+</v-click>
+<br>
+<v-click>
+
+### ・シンプルで必要最低限の機能
+
+</v-click>
+<br>
+<v-click>
+
+### ・デザインがいい感じ
+
+</v-click>
+<br><br>
+<v-click>
+
+## そんな都合のいいものがあるのか...?
+
+</v-click>
+
+
+--- 
+layout: cover
+background: /img/galaxy-3608029_1920.jpg
+---
+
+# OpenNebula
+
+---
+layout: default
+---
+# OpenNebulaのここがすごい！
+
+<v-click>
+
+## 軽量&シンプル
+
+</v-click>
+<v-click>
+
+- 1つのBashスクリプトをダウンロードするだけで準備完了
+
+</v-click>
+<v-click>
+
+- 構築・破壊も1コマンドで実施可能
+
+</v-click>
+<v-click>
+
+- 必要なリソースがOpenStackの66%
+
+</v-click>
+
+<br>
+<v-click>
+
+## 必要十分な機能群
+
+</v-click>
+<v-click>
+
+- コンピューティング
+
+</v-click>
+<v-click>
+
+- ネットワーク
+
+</v-click>
+<v-click>
+
+- ストレージ
+
+</v-click>
+<v-click>
+
+- IAM
+
+</v-click>
+<v-click>
+
+- IDフェデレーション
+
+</v-click>
+<v-click>
+
+- スケジューラ
+
+</v-click>
+<v-click>
+
+- モニタリング
+
+</v-click>
+<v-click>
+
+- オーバーコミット ...
+
+</v-click>
+
+---
+layout: default
+---
+
+# そういえば
+
+### インスタンスに直接sshできなかったのは？
+
+<v-click>
+
+- 僕がネットワークについて勘違いしていたから
+- インスタンスに繋がるネットワークは、ルータに直接接続されているわけではない
+- PCでポートフォワーディングをしないと認識できない
+
+</v-click>
+
+<br>
+
+### インスタンスから外部に通信不可だったのは？
+<v-click>
+
+- ルーティングテーブルの設定の問題
+- FORWARDが全てDROPされるようになっていた
+- ACCEPTに変更することで通信できるようになった
+- ただ、PCを再起動するとOpenNebulaによってDROPに戻される
+- 悪いのはOpenNebulaか、自分の構成か
+
+</v-click>
+
+---
+layout: center
+---
+
+# 自宅クラウド、完成！
+
 
 ---
 layout: default
@@ -281,29 +602,43 @@ layout: default
 - ssh怖くない
 - エラーに対する嗅覚(権限、ハードウェア依存か否か)が身に付く
 - 研究室のPCのsshサーバー設定ができるようになった
-- 役に立つか立たないかはわからない、だけど知ってるとちょっとだけ威張れたりもする
+- 役に立つか立たないかはわからない、だけど知ってるとそれだけでちょっと威張れたりもする
 
 ---
 layout: default
 ---
 
-# 自分で使ってみて思ったこと
+# 使ってみて思ったこと
 
-- そもそもAWS使えないやつ、PGCloud触るの無理くね？
+- そもそもAWS使えない状態で、PGCloud触るの無理くね？
 - 微妙に仕様が違うせいで、PGCloudに慣れるとむしろ悪影響じゃね？
-- 例え無料でも、停電や棚掃除で電源落ちるレベルの不安定さはダメじゃね？
-- 無料で使いたいなら、AWS Educateアカウント作れば良くね？
+- 例え無料でも、停電や掃除で電源落ちるレベルの不安定さはダメじゃね？
 
 
 ---
 layout: default
 ---
 
-# 自分のお気持ち整理
-- Linuxサーバー使えて喜ぶの、俺だけ説
-- デプロイできた！で止まって欲しくない
-- 道具の使い方を知るだけで満足して欲しくなかった
-- その先のHowやWhyについて議論して欲しかった
+# 振り返り
+- そもそも、無料で使いたいなら、AWS Educateアカウント作れば良くね？
+- そもそも、traPでもちゃんとGeekしているのは上位勢だけらしい
+- そもそも、Linuxサーバー使えて喜ぶの、俺だけ説
+- そもそも、Geekであって欲しいのはなんでなの？
+  - 道具の使い方を知るだけで満足して欲しくなかった
+  - デプロイできた！で止まって欲しくない
+  - その先のHowやWhyについて一緒に議論したかった
+
+
+--- 
+layout: two-cols
+layoutClass: gap-16
+---
+
+# kpppn様の一言
+
+:: right ::
+
+<img h="80%" src="/img/スクリーンショット 2024-11-23 0.47.11.png">
 
 ---
 layout: intro
@@ -323,6 +658,14 @@ layout: default
 <v-click>
 
 ### ・ 使われるものを作りたいなら市場・顧客調査をしっかりやろう
+
+</v-click>
+
+<br>
+
+<v-click>
+
+### ・ 目標は具体的に設定しよう
 
 </v-click>
 
