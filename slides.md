@@ -9,8 +9,6 @@ class: 'text-center'
 
 # 自宅クラウドを作ってみて
 
-## Free Edition
-
 泉 祐汰
 
 <script setup>
