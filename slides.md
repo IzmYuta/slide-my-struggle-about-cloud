@@ -53,65 +53,14 @@ layoutClass: gap-16
 
 - 大学：東京理科大学(25卒)
 
-- 内定先：株式会社GINIEE
-
 - 趣味：コーヒー、ゲーム全般
 
-- 近況：研究テーマが「やっと」決まりました<br>
 バイト先でフルスタックにこき使われてます
 
 ::right::
 
 <img h="100%" src="/img/84177730-BA7B-48B9-AC52-7B3C176E6756_4_5005_c.jpeg">
 
-
----
-layout: default
----
-
-# GINIEEについて
-
-<v-click>
-
-## 会社についての説明は社員さんに任せるとして...
-
-</v-click>
-<br>
-
-<v-click>
-
-## 入社の決め手：
-
-</v-click>
-
-<br>
-
-<v-click>
-
-### ・ 使用している技術の幅が広かったから
-
-</v-click>
-
-<v-click>
-
-### ・ 経営理念に共感し、それが飾りでないと感じたから
-
-</v-click>
-
-<br><br>
-
-<v-click>
-
-↓詳しくは
-<br>
-[ホームページ](https://geniee.co.jp/)
-<br>
-[note](https://note.com/geniee_inc/)
-<br>
-[zenn](https://zenn.dev/p/geniee)
-
-
-</v-click>
 
 ---
 layout: intro
